@@ -1,0 +1,11 @@
+{
+    "name": "ethereal-modpack",
+    "author": "Gry",
+    "description": "Ethereal Guild Modpack",
+    "options": {
+        "niceName": "Ethereal Guild Modpack"
+    },
+    "supportUrl": "https://github.com/gryTera/ethereal-modpack/issues",
+    "servers": ["https://raw.githubusercontent.com/gryTera/ethereal-modpack/master/"],
+    "disableAutoUpdate": false
+}
