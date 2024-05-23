@@ -1,6 +1,6 @@
 {
   "files": {
-    "index.js": "5b7ce2aaa19e7432fdbec1a90eae727b93f64a056f19faa1296f1e0ebdd3ec4a",
+    "index.js": "13c101cad99b4a3cdf9897a066bd1f64adf97e4e382761321838510d4f3362f9",
     "module.json": "57def2f8a13559e86011b331ef2956288dbeb891b30e1a81ca81bdd64d464ec3",
     "src/quest-completer.js": "6943ee3d35af8babdcb58af103dc32cca62ae2064f967e7aa24b13269c7bf03f",
     "src/register-commands.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
