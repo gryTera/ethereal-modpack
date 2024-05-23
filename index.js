@@ -5,7 +5,7 @@ const { autoRestartGuildQuests } = require('./src/quest-completer');
 
 class EtherealModpack {
 	constructor(mod) {
-		addNeededOpcodes(mod);
+		// addNeededOpcodes(mod);
 
 		console.log(JSON.stringify(mod, null, 2));
 
