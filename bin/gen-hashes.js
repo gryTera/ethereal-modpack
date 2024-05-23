@@ -3,15 +3,14 @@ const { readFileSync, writeFileSync } = require('fs');
 
 const manifest = {
   files: {},
-  defs: {
-    REQUEST_FINISH_GUILD_QUEST: 1,
-  },
+  defs: {},
 };
 
 function generateHash(text) {
   return createHash('sha256').update(text).digest('hex');
 }
 
+// Any new files added to the modpack need to be listed here.
 const includedFiles = [
   'index.js',
   'module.json',

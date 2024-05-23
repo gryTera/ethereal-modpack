@@ -74,6 +74,7 @@ class Util {
   // NOTE: Server communications begin with `C_`, while client communications begin with `S_`.
   // See: https://github.com/tera-private-toolbox/tera-toolbox/blob/master/doc/mod/hooks.md
 
+  // Send a command to the server.
   sendServer(cmd, vars, inSeconds = 0) {
     this.tryCatch(() => {
       const realCommand = 'C_' + cmd;
@@ -85,6 +86,7 @@ class Util {
     }, arguments);
   }
 
+  // Send a command to the client.
   sendClient(cmd, vars, inSeconds = 0) {
     this.tryCatch(() => {
       const realCommand = 'S_' + cmd;
@@ -96,6 +98,7 @@ class Util {
     }, arguments);
   }
 
+  // Hook to a command that's being sent to the server.
   hookServer(cmd, cb) {
     this.tryCatch(() => {
       const realCommand = 'C_' + cmd;
@@ -104,6 +107,7 @@ class Util {
     }, arguments);
   }
 
+  // Hook to a command that's being sent to the client.
   hookClient(cmd, cb) {
     this.tryCatch(() => {
       const realCommand = 'S_' + cmd;
@@ -112,6 +116,7 @@ class Util {
     }, arguments);
   }
 
+  // Used to output usage of a server command for debugging purposes.
   debugHookServer(cmd, prefix = '') {
     const realCommand = 'C_' + cmd;
     const cmdVersion = this.getCmdVersion(realCommand);
@@ -121,6 +126,7 @@ class Util {
     });
   }
 
+  // Used to output usage of a client command for debugging purposes.
   debugHookClient(cmd, prefix = '') {
     const realCommand = 'S_' + cmd;
     const cmdVersion = this.getCmdVersion(realCommand);

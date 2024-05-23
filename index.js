@@ -5,7 +5,7 @@ const { autoRestartGuildQuests } = require('./src/quest-completer');
 
 class EtherealModpack {
   constructor(mod) {
-    addNeededOpcodes(mod);
+    addNeededOpcodes(mod); // This needs to be called before any bootstrapping so that hooks can work effectively.
 
     new Util(mod).then(utils => {
       autoRestartGuildQuests(utils);
