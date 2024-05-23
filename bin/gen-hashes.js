@@ -13,7 +13,8 @@ function generateHash(text) {
 const includedFiles = [
   'index.js',
   'module.json',
-  'src/destructor.js',
+  'src/quest-completer.js',
+  'src/register-commands.js',
   'src/util.js',
 ];
 
