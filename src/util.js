@@ -1,4 +1,4 @@
-export default class Util {
+class Util {
   mod;
 
   constructor(mod) {
@@ -45,3 +45,5 @@ export default class Util {
 
   /* === END CMD HELPERS === */
 }
+
+module.exports = Util;

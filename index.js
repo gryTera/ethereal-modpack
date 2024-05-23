@@ -1,6 +1,6 @@
-import destructor from './src/destructor';
+const destructor = require('./src/destructor');
 
-export default class EtherealModpack {
+class EtherealModpack {
 	mod;
 
 	constructor(mod) {
@@ -12,3 +12,5 @@ export default class EtherealModpack {
 		destructor(this.mod);
 	}
 }
+
+module.exports = EtherealModpack;

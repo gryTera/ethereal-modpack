@@ -1,8 +1,10 @@
 {
-    "files": {
-        "README.MD": "2206c99dc97d7f90831099066f62d6ac65743470d3202bb7eb56cc082cd058df",
-        "index.js": "382e17e41e5985ed45ee6f73c26ae36d686300ec6439d6a472ecd0cd76d84322",
-        "module.json": "16136c6796bc61424ac3bc7357b8b8e858fa3be80f27b7b3db8d7e6f1f29eb9a"
-    },
-    "defs": {}
+  "files": {
+    "index.js": "8c173a0198e882d24fdcda373e3ef3d9e5eaeea78bf918220c819000a92d5788",
+    "module.json": "57def2f8a13559e86011b331ef2956288dbeb891b30e1a81ca81bdd64d464ec3",
+    "README.md": "67100dd392e737ad861763aa582d0756ef0421219a31c2fc80117ed463310aa9",
+    "src/destructor.js": "fc1b64646d1c291e691c9fe8c7e0084890a58224e3d38a0fee41459c6b521731",
+    "src/util.js": "814a4a092a1d2730524631129f2d5d726f88023a0311451a4c63f162206100fd"
+  },
+  "defs": {}
 }
