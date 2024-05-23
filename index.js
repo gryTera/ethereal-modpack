@@ -1,15 +1,15 @@
-const destructor = require('./src/destructor');
+const Util = require('./src/util');
+
+const { autoRestartGuildQuests } = require('./src/quest-completer');
 
 class EtherealModpack {
-	mod;
-
 	constructor(mod) {
-		this.mod = mod; // Add reference to passed mod for destructor.
-		this.mod.log('Ethereal Modpack successfully loaded up!');
-	}
-
-	destructor() {
-		destructor(this.mod);
+		new Util(mod).then(utils => {
+			autoRestartGuildQuests(utils);
+		}).catch(e => {
+			mod.err('Failed to bootstrap modpack. Fetch to tera-data tree failed.');
+			mod.err(e);
+		});
 	}
 }
 
