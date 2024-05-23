@@ -47,7 +47,7 @@ class Util {
     try {
       cb();
     } catch(e) {
-      this.mod.err(e, JSON.stringify(data, null, 2));
+      this.mod.error(e, JSON.stringify(data, null, 2));
     }
   }
 
@@ -62,7 +62,7 @@ class Util {
   }
 
   err(msg) {
-    this.mod.err(msg);
+    this.mod.error(msg);
   }
 
   /* === END LOGGING === */

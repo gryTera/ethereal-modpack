@@ -7,8 +7,8 @@ class EtherealModpack {
 		new Util(mod).then(utils => {
 			autoRestartGuildQuests(utils);
 		}).catch(e => {
-			mod.err('Failed to bootstrap modpack. Fetch to tera-data tree failed.');
-			mod.err(e);
+			mod.error('Failed to bootstrap modpack. Fetch to tera-data tree failed.');
+			mod.error(e);
 		});
 	}
 }
