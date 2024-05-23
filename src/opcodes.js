@@ -7,6 +7,8 @@ function addNeededOpcodes(mod) {
 
   const opcodeOverrides = {
     C_REQUEST_FINISH_GUILD_QUEST: 41778,
+    C_REQUEST_START_GUILD_QUEST: 30633,
+    S_UPDATE_GUILD_QUEST_STATUS: 37029,
   };
 
   for (const [name, opcode] of Object.entries(opcodeOverrides)) {
