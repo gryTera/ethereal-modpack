@@ -1,8 +1,8 @@
 {
   "files": {
-    "index.js": "780b3043bec651bd7c48fa71553123338266ba670753f5748a0265c9d3ea6663",
+    "index.js": "52c742abb02801f9efcd5b5675a1038a34b55db4f700e022bb07cc2a18130475",
     "module.json": "57def2f8a13559e86011b331ef2956288dbeb891b30e1a81ca81bdd64d464ec3",
-    "src/opcodes.js": "f7c45770743951f0d12d14d0d31d27732b986d289b8f9eac8d68ae676f4d6cae",
+    "src/opcodes.js": "9d17dd0774f9345926fabd38c07814d84dfd35d14074d5ce7dbb923777b4a51d",
     "src/quest-completer.js": "6943ee3d35af8babdcb58af103dc32cca62ae2064f967e7aa24b13269c7bf03f",
     "src/register-commands.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "src/util.js": "37b7c6e7616b672e01afdf21b20713e7c55612c33dba0a960d236ec600f789e8"
