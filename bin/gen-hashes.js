@@ -3,7 +3,9 @@ const { readFileSync, writeFileSync } = require('fs');
 
 const manifest = {
   files: {},
-  defs: {},
+  defs: {
+    REQUEST_FINISH_GUILD_QUEST: 1,
+  },
 };
 
 function generateHash(text) {
