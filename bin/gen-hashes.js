@@ -13,7 +13,6 @@ function generateHash(text) {
 const includedFiles = [
   'index.js',
   'module.json',
-  'README.md',
   'src/destructor.js',
   'src/util.js',
 ];

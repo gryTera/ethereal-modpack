@@ -4,7 +4,7 @@
   "description": "Modpack features by request of Ethereal guild members.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node ./bin/gen-hashes.js"
   },
   "author": "",
   "license": "ISC"
