@@ -103,7 +103,7 @@ class Util {
     this.tryCatch(() => {
       const realCommand = 'C_' + cmd;
       const cmdVersion = this.getCmdVersion(realCommand);
-      this.mod.hook(realCommand, cmdVersion, evt => tryCatch(() => cb(evt), arguments));
+      this.mod.hook(realCommand, cmdVersion, evt => this.tryCatch(() => cb(evt), arguments));
     }, arguments);
   }
 
@@ -112,7 +112,7 @@ class Util {
     this.tryCatch(() => {
       const realCommand = 'S_' + cmd;
       const cmdVersion = this.getCmdVersion(realCommand);
-      this.mod.hook(realCommand, cmdVersion, evt => tryCatch(() => cb(evt), arguments));
+      this.mod.hook(realCommand, cmdVersion, evt => this.tryCatch(() => cb(evt), arguments));
     }, arguments);
   }
 
