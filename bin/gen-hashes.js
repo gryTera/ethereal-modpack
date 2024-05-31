@@ -14,6 +14,7 @@ function generateHash(text) {
 const includedFiles = [
   'index.js',
   'module.json',
+  'migrator.js',
 
   'defs/C_REQUEST_SPAWN_SERVANT.4.def',
   'defs/C_START_SERVANT_ACTIVE_SKILL.1.def',

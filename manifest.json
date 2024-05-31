@@ -1,7 +1,8 @@
 {
   "files": {
     "index.js": "02691517890dec5415f15b3f22ff831da0697e4b2dda7933f9effebe3e53402f",
-    "module.json": "57def2f8a13559e86011b331ef2956288dbeb891b30e1a81ca81bdd64d464ec3",
+    "module.json": "6773160d41f529dca0d086abcf3eb5b83f86c138f84e40291636b5ac59273ddd",
+    "migrator.js": "3e4862f5105dd01b0d72e2ccca38ed3276982bbd4f350b514a6278da29c512b0",
     "defs/C_REQUEST_SPAWN_SERVANT.4.def": "ae52d01eddb5dcafe477c318cd1c149bfc13160c94b90c1d8a1ae63cfa86c5f0",
     "defs/C_START_SERVANT_ACTIVE_SKILL.1.def": "4fb53e84df698b8a68e2160eaf818284296409232124b4e518936e1a325b3f5a",
     "defs/C_START_SERVANT_ACTIVE_SKILL.2.def": "6df4a7012bdf207fab09d61cb5e5e1e9a304679a8cdd79365bcfe79a72581e93",
@@ -10,7 +11,7 @@
     "src/auto-pet.js": "fdfc0ba7d7d19664246ddd2f1fe69d275ca379dd112c725248011c0d2ea2a654",
     "src/auto-quest.js": "d44b8e03bac68d677b85d30a5957d61cb31ae2630626592cba4624441361063f",
     "src/auto-reward.js": "965ce263792cb0553237547f38d9ec06338193368df9bdd5508749a5c89df8b8",
-    "src/commands.js": "ead024c366ac9180202923dd3b5a1f9799e20e6b793db219efe7e56f058e6230",
+    "src/commands.js": "fdc56b2f0e4f787a13d05c5b15d27c3f6999de62c4ceed126fb4193bd7cff910",
     "src/defs.js": "3ae28b17f99f0c6f44fa1d3271002822e9e39251ca5c6f8a14556f796bfe0e15",
     "src/opcodes.js": "43ead0c5b40c7b6481bf3cc5a291f10cecacb812cf0ee86e1609a7dcac1561a8",
     "src/spam-f.js": "3abf28e278e5c650f29d2ed82210e32fe25132635d7dde0b0f5f9ff12e54d5f3",

@@ -34,22 +34,6 @@ const mod_settings = [
 ];
 
 function registerCommands(mod) {
-  if (mod.settings === undefined) {
-    mod.settings = {};
-  }
-
-  // Setup defaults.
-  for (const setting of mod_settings) {
-    if (mod.settings[setting.key] === undefined) {
-      mod.settings[setting.key] = true; // We default everything to on for now.
-    }
-  }
-
-  // Initialize the pet object
-  if (mod.settings.pets === undefined) {
-    mod.settings.pets = {};
-  }
-
   // Helper method for chat commands.
   function toggleOption(opt) {
     mod.settings[opt] = !mod.settings.opt;
