@@ -14,9 +14,21 @@ function generateHash(text) {
 const includedFiles = [
   'index.js',
   'module.json',
+
+  'defs/C_REQUEST_SPAWN_SERVANT.1.def',
+  'defs/C_REQUEST_SPAWN_SERVANT.2.def',
+  'defs/C_START_SERVANT_ACTIVE_SKILL.1.def',
+  'defs/C_START_SERVANT_ACTIVE_SKILL.2.def',
+  'defs/S_START_COOLTIME_SERVANT_SKILL.1.def',
+  'defs/S_UPDATE_SERVANT_INFO.1.def',
+
+  'src/auto-pet.js',
+  'src/auto-quest.js',
+  'src/auto-reward.js',
+  'src/commands.js',
+  'src/defs.js',
   'src/opcodes.js',
-  'src/quest-completer.js',
-  'src/register-commands.js',
+  'src/spam-f.js',
   'src/util.js',
 ];
 

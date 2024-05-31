@@ -31,10 +31,22 @@ class Util {
     });
   }
 
+  // Note that we're only allowing access to `get`ing settings.
+  // Files leveraging `utils` will not have write access.
+  get settings() {
+    return this.mod.settings;
+  }
+
+  // Gives access to tera-game-state
+  get game() {
+    return this.mod.game;
+  }
+
   // Retrieves the appropriate cmd API versions from `this.defs`.
   getCmdVersion(cmd) {
     if (!this.defs.has(cmd)) {
       this.mod.warn(`Unknown command ${cmd}. Using "raw" as placeholder.`);
+      return 'raw';
     }
     return this.defs.get(cmd);
   }
@@ -75,10 +87,10 @@ class Util {
   // See: https://github.com/tera-private-toolbox/tera-toolbox/blob/master/doc/mod/hooks.md
 
   // Send a command to the server.
-  sendServer(cmd, vars, inSeconds = 0) {
+  sendServer(cmd, vars, inSeconds = 0, versionOverride = undefined) {
     this.tryCatch(() => {
       const realCommand = 'C_' + cmd;
-      const cmdVersion = this.getCmdVersion(realCommand);
+      const cmdVersion = versionOverride || this.getCmdVersion(realCommand);
       
       this.mod.setTimeout(() => {
         this.tryCatch(() => this.mod.send(realCommand, cmdVersion, vars), arguments);
@@ -87,10 +99,10 @@ class Util {
   }
 
   // Send a command to the client.
-  sendClient(cmd, vars, inSeconds = 0) {
+  sendClient(cmd, vars, inSeconds = 0, versionOverride = undefined) {
     this.tryCatch(() => {
       const realCommand = 'S_' + cmd;
-      const cmdVersion = this.getCmdVersion(realCommand);
+      const cmdVersion = versionOverride || this.getCmdVersion(realCommand);
 
       this.mod.setTimeout(() => {
         this.tryCatch(() => this.mod.send(realCommand, cmdVersion, vars), arguments);
@@ -99,27 +111,27 @@ class Util {
   }
 
   // Hook to a command that's being sent to the server.
-  hookServer(cmd, cb) {
+  hookServer(cmd, cb, versionOverride = undefined) {
     this.tryCatch(() => {
       const realCommand = 'C_' + cmd;
-      const cmdVersion = this.getCmdVersion(realCommand);
+      const cmdVersion = versionOverride || this.getCmdVersion(realCommand);
       this.mod.hook(realCommand, cmdVersion, evt => this.tryCatch(() => cb(evt), arguments));
     }, arguments);
   }
 
   // Hook to a command that's being sent to the client.
-  hookClient(cmd, cb) {
+  hookClient(cmd, cb, versionOverride = undefined) {
     this.tryCatch(() => {
       const realCommand = 'S_' + cmd;
-      const cmdVersion = this.getCmdVersion(realCommand);
+      const cmdVersion = versionOverride || this.getCmdVersion(realCommand);
       this.mod.hook(realCommand, cmdVersion, evt => this.tryCatch(() => cb(evt), arguments));
     }, arguments);
   }
 
   // Used to output usage of a server command for debugging purposes.
-  debugHookServer(cmd, prefix = '') {
+  debugHookServer(cmd, prefix = '', versionOverride = undefined) {
     const realCommand = 'C_' + cmd;
-    const cmdVersion = this.getCmdVersion(realCommand);
+    const cmdVersion = versionOverride || this.getCmdVersion(realCommand);
 
     this.mod.hook(realCommand, cmdVersion, evt => {
       this.mod.log(prefix + JSON.stringify(evt, null, 2));
@@ -127,9 +139,9 @@ class Util {
   }
 
   // Used to output usage of a client command for debugging purposes.
-  debugHookClient(cmd, prefix = '') {
+  debugHookClient(cmd, prefix = '', versionOverride = undefined) {
     const realCommand = 'S_' + cmd;
-    const cmdVersion = this.getCmdVersion(realCommand);
+    const cmdVersion = versionOverride || this.getCmdVersion(realCommand);
 
     this.mod.hook(realCommand, cmdVersion, evt => {
       this.mod.log(prefix + JSON.stringify(evt, null, 2));
