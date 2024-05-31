@@ -38,7 +38,7 @@ function autoPet(utils) {
       servantId: getPet().id,
       uniqueId: getPet().uniqueId,
       unk: 0,
-    });
+    }, 4);
 
     usePetSkill();
   }

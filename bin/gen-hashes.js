@@ -15,8 +15,7 @@ const includedFiles = [
   'index.js',
   'module.json',
 
-  'defs/C_REQUEST_SPAWN_SERVANT.1.def',
-  'defs/C_REQUEST_SPAWN_SERVANT.2.def',
+  'defs/C_REQUEST_SPAWN_SERVANT.4.def',
   'defs/C_START_SERVANT_ACTIVE_SKILL.1.def',
   'defs/C_START_SERVANT_ACTIVE_SKILL.2.def',
   'defs/S_START_COOLTIME_SERVANT_SKILL.1.def',
