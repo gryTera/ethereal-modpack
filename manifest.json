@@ -8,7 +8,7 @@
     "defs/C_START_SERVANT_ACTIVE_SKILL.2.def": "6df4a7012bdf207fab09d61cb5e5e1e9a304679a8cdd79365bcfe79a72581e93",
     "defs/S_START_COOLTIME_SERVANT_SKILL.1.def": "9531917dceb13a00862d2b07e6ff03865b8ba8888cecbdc7c8a5a7707da931ed",
     "defs/S_UPDATE_SERVANT_INFO.1.def": "355dac2b462cde6b2c00e6712ffdef4807013605d7b4e3d6b33fd12652f7ccd2",
-    "src/auto-pet.js": "fdfc0ba7d7d19664246ddd2f1fe69d275ca379dd112c725248011c0d2ea2a654",
+    "src/auto-pet.js": "94bf0fc50c6f13311b488194777523263b8b0e3f9f36d78e9e5f387029962b02",
     "src/auto-quest.js": "d44b8e03bac68d677b85d30a5957d61cb31ae2630626592cba4624441361063f",
     "src/auto-reward.js": "965ce263792cb0553237547f38d9ec06338193368df9bdd5508749a5c89df8b8",
     "src/commands.js": "fdc56b2f0e4f787a13d05c5b15d27c3f6999de62c4ceed126fb4193bd7cff910",

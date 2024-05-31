@@ -100,7 +100,7 @@ function autoPet(utils) {
   });
 
   // Detects and saves pets when they are summoned.
-  utils.hookClient('REQUEST_SPAWN_SERVANT', evt => {
+  utils.hookServer('REQUEST_SPAWN_SERVANT', evt => {
     if (!utils.game.me.is(evt.ownerId)) return;
 
     if (!getPet().id) {
@@ -133,7 +133,7 @@ function autoPet(utils) {
 
   // Use pet skill on rez.
   utils.game.me.on('resurrect', () => {
-    if (!util.settings.pet || !getPet().bondSkill) return;
+    if (!utils.settings.pet || !getPet().bondSkill) return;
     usePetSkill();
   });
 
