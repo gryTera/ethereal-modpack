@@ -34,6 +34,10 @@ const mod_settings = [
 ];
 
 function registerCommands(mod) {
+  if (mod.settings === undefined) {
+    mod.settings = {};
+  }
+
   // Setup defaults.
   for (const setting of mod_settings) {
     if (mod.settings[setting.key] === undefined) {

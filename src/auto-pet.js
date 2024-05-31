@@ -109,7 +109,7 @@ function autoPet(utils) {
         uniqueId: evt.dbid,
       });
     }
-  }, 2);
+  }, 4);
 
   // Cleanup if pet is manually despawned.
   utils.hookClient('REQUEST_DESPAWN_SERVANT', evt => {
@@ -120,7 +120,7 @@ function autoPet(utils) {
   // Store bond skill on use.
   utils.hookServer('START_SERVANT_ACTIVE_SKILL', evt => {
     savePet({ ...getPet(), bondSkill: evt.skill });
-  });
+  }, 2);
 
   // Detect and store bond skill cooldown to restart.
   utils.hookClient('START_COOLTIME_SERVANT_SKILL', evt => {
@@ -143,7 +143,7 @@ function autoPet(utils) {
 
     const energy = (evt.energy / 300) * 100;
     if (energy < 90) feedPet();
-  });
+  }, 1);
 }
 
 module.exports = {
