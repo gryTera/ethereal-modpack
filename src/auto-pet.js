@@ -32,7 +32,7 @@ function autoPet(util) {
   }
 
   function summonPet() {
-    if (!mod.settings.pet) return;
+    if (!util.settings.pet) return;
 
     util.sendServer('REQUEST_SPAWN_SERVANT', {
       servantId: getPet().id,
@@ -44,7 +44,7 @@ function autoPet(util) {
   }
 
   function feedPet() {
-    if (!mod.settings.pet || !getPet().id) return;
+    if (!util.settings.pet || !getPet().id) return;
 
     foods.forEach(item => {
 			const foodItem = mod.game.inventory.findInBagOrPockets(item.id);
@@ -68,7 +68,7 @@ function autoPet(util) {
   }
 
   function usePetSkill() {
-    if (!mod.settings.pet) return;
+    if (!util.settings.pet) return;
 
     util.sendServer('START_SERVANT_ACTIVE_SKILL', {
       gameId: getPet().id,
@@ -124,7 +124,7 @@ function autoPet(util) {
 
   // Detect and store bond skill cooldown to restart.
   util.hookClient('START_COOLTIME_SERVANT_SKILL', evt => {
-    if (!mod.settings.pet || !getPet().bondSkill) return;
+    if (!util.settings.pet || !getPet().bondSkill) return;
 
     petSkillTimeout = util.mod.setTimeout(() => {
       usePetSkill();
@@ -133,13 +133,13 @@ function autoPet(util) {
 
   // Use pet skill on rez.
   mod.game.me.on('resurrect', () => {
-    if (!mod.settings.pet || !getPet().bondSkill) return;
+    if (!util.settings.pet || !getPet().bondSkill) return;
     usePetSkill();
   });
 
   // Feed pet when below 90% energy.
   util.hookClient('UPDATE_SERVANT_INFO', evt => {
-    if (!mod.settings.pet) return;
+    if (!util.settings.pet) return;
 
     const energy = (evt.energy / 300) * 100;
     if (energy < 90) feedPet();

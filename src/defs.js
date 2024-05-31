@@ -1,3 +1,5 @@
+const path = require('path');
+
 // Some defs are not available by default in tera toolbox. We load them here.
 function addDefs(mod) {
   mod.dispatch.addDefinition('C_REQUEST_SPAWN_SERVANT', 1, path.join(__dirname, '..', 'defs', 'C_REQUEST_SPAWN_SERVANT.1.def'));
