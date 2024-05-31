@@ -1,3 +1,0 @@
-int32 servantId # same as S_REQUEST_SERVANT_INFO_LIST
-int32 uniqueId # same as S_REQUEST_SERVANT_INFO_LIST
-int32 unk # 0
